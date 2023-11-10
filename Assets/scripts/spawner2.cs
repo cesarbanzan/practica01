@@ -36,15 +36,14 @@ public class spawner2 : MonoBehaviour
         {
             bajar = true;
         }
-        if (contarEnemigos<5)
-        {
-            if (timerRandom < 0 && crearEnemigos==true)
+       
+            if (timerRandom < 0&& contarEnemigos < 5)
             {
                 Instantiate(enemigo2).transform.position = new Vector3(gameObject.transform.position.x, gameObject.transform.position.y, gameObject.transform.position.z);
                 contarEnemigos++;
                 timerRandom = Random.Range(1, 3);
             }
-        }
+        
 
     }
 }
